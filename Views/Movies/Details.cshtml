@@ -1,0 +1,44 @@
+@model Mazzoni.Alex._5H.WebCRUD.Models.Movie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Html.DisplayFor(model => model.Title) Details</h1>
+
+<div class="centra">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="Title" id="inp" placeholder="&nbsp;" disabled/>
+              <label asp-for="Title" class="label"></label>
+              <span class="focus-bg"></span>
+            </label>
+        </div>
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="ReleaseDate" id="inp" placeholder="&nbsp;" disabled/>
+              <label asp-for="ReleaseDate" class="label"></label>
+              <span class="focus-bg"></span>
+            </label>
+        </div>
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="Genre" id="inp" placeholder="&nbsp;" disabled/>
+              <label asp-for="Genre" class="label"></label>
+              <span class="focus-bg"></span>
+            </label>
+        </div>
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="Price" id="inp" placeholder="&nbsp;" disabled/>
+              <label asp-for="Price" class="label"></label>
+              <span class="focus-bg"></span>
+            </label>
+        </div>
+        <a class="btnBack" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+    </div>
+</div>
+    
+    <a class="btnBack" asp-action="Index" >Back to List</a>

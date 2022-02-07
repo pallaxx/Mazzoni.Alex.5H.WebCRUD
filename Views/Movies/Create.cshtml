@@ -1,0 +1,53 @@
+@model Mazzoni.Alex._5H.WebCRUD.Models.Movie
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Add a Movie</h1>
+
+<div class="centra">
+    <form asp-action="Create">
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="Title" id="inp" placeholder="&nbsp;" />
+              <label asp-for="Title" class="label"></label>
+              <span class="focus-bg"></span>
+              <span asp-validation-for="Title" class="text-danger"></span>
+            </label>
+        </div>
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="ReleaseDate" id="inp" placeholder="&nbsp;" required/>
+              <label asp-for="ReleaseDate" class="label"></label>
+              <span class="focus-bg"></span>
+              <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+            </label>
+        </div>
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="Genre" id="inp" placeholder="&nbsp;" />
+              <label asp-for="Genre" class="label"></label>
+              <span class="focus-bg"></span>
+              <span asp-validation-for="Genre" class="text-danger"></span>
+            </label>
+        </div>
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="Price" id="inp" placeholder="&nbsp;" required/>
+              <label asp-for="Price" class="label"></label>
+              <span class="focus-bg"></span>
+              <span asp-validation-for="Price" class="text-danger"></span>
+            </label>
+        </div>
+        <input type="submit" value="Add" class="btnGo" />
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index" class="btnBack">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

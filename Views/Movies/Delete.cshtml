@@ -1,0 +1,47 @@
+@model Mazzoni.Alex._5H.WebCRUD.Models.Movie
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Do you want to delete @Html.DisplayFor(model => model.Title)?</h1>
+<div class="centra">
+    <div>
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="Title" id="inp" placeholder="&nbsp;" disabled/>
+              <label asp-for="Title" class="label"></label>
+              <span class="focus-bg"></span>
+            </label>
+        </div>
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="ReleaseDate" id="inp" placeholder="&nbsp;" disabled/>
+              <label asp-for="ReleaseDate" class="label"></label>
+              <span class="focus-bg"></span>
+            </label>
+        </div>
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="Genre" id="inp" placeholder="&nbsp;" disabled/>
+              <label asp-for="Genre" class="label"></label>
+              <span class="focus-bg"></span>
+            </label>
+        </div>
+        <div class="spazio">
+            <label for="inp" class="inp">
+              <input asp-for="Price" id="inp" placeholder="&nbsp;" disabled/>
+              <label asp-for="Price" class="label"></label>
+              <span class="focus-bg"></span>
+            </label>
+        </div>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" id="danger" value="Delete" class="btnGo" />
+        </form>
+    </div>
+</div>
+
+    <a class="btnBack" asp-action="Index" >Back to List</a>
+
+</div>
